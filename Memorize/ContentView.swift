@@ -8,17 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    // some means look in their and see what it returns and then Behave like that
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        HStack{
+            CardView(isFaceUp: true)
+            CardView()
+            CardView()
+            CardView()
+        }.foregroundColor(.orange)
+            .padding()
     }
+    
 }
 
+struct CardView: View {
+    var isFaceUp: Bool = false
+    var body: some View {
+        if isFaceUp {
+            ZStack{
+                RoundedRectangle(cornerRadius: 12)
+            }
+        }
+        else
+        {
+            ZStack{
+                RoundedRectangle(cornerRadius: 12).foregroundColor(.white)
+                RoundedRectangle(cornerRadius: 12)
+                    .strokeBorder(lineWidth: 2)
+                Text("🤣")
+            }
+        }
+        
+    }
+}
 #Preview {
     ContentView()
 }
