@@ -1,1 +1,1 @@
-A Simple SwiftUI Project that is used for flipping cards.
+A Simple SwifUI Game.
