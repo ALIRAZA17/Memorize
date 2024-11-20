@@ -21,7 +21,7 @@ struct ContentView: View {
     }
     
     var Cards: some View{
-        LazyVGrid(columns: [GridItem(.adaptive(minimum: 120))]){
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: 85))]){
             ForEach(0..<cardCount, id: \.self){ index in
                 CardView()
             }
